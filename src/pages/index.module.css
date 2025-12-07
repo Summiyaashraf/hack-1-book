@@ -1,0 +1,69 @@
+/* src/pages/index.module.css */
+
+/* --- 1. Homepage Header (Green Hero Section) --- */
+.heroBanner {
+  padding: 6rem 0; 
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 350px; 
+}
+
+.heroBanner h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.heroBanner p {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+}
+
+/* --- 2. Features Cards (Boxes) Alignment Fix --- */
+
+/* Card Link ko display: flex banaya taaki poori height le sake */
+.cardLink {
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base) !important;
+  display: flex; 
+  height: 100%; 
+}
+
+/* Card ko flex container banaya taaki content column mein ho */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Card ki height ko link ki height tak badhaya */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Card Body ko flex-grow diya taaki woh zyada se zyada space le aur buttons neeche rahein */
+.card__body {
+  flex-grow: 1; /* Yeh property sabse zaroori hai barabar height ke liye */
+}
+
+/* Card Footer hamesha neeche rahega */
+.card__footer {
+  margin-top: auto; /* Footer ko bottom mein push karega */
+}
+
+/* Hover effect */
+.cardLink:hover .card {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- 3. Responsive Fix (Agar screen choti ho) --- */
+/* Mobile aur tablet par cards ko poori width do */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 0;
+    min-height: 250px;
+  }
+}

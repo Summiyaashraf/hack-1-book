@@ -1,0 +1,44 @@
+/**
+ * Global styles for the Physical AI Textbook.
+ * Add any general styles that apply across the entire site here.
+ */
+
+ body {
+  font-family: var(--ifm-font-family-base);
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+}
+
+ h1, h2, h3, h4, h5, h6 {
+  color: var(--ifm-heading-color);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+ a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+ a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below image */
+  margin: 1rem auto; /* Center images and add some vertical spacing */
+}
+
+/* Add some basic padding to content containers */
+.main-wrapper {
+  padding: 1rem;
+}
+
+/* Docusaurus specific adjustments */
+.docItemContainer {
+  max-width: 800px; /* Limit content width for readability */
+  margin: 0 auto; /* Center content */
+}
